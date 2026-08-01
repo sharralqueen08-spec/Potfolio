@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sharral Saddique | Full Stack Web Developer</title>
+
+  <meta name="description"
+    content="Professional Full Stack Web Developer Portfolio - Modern Responsive Websites & Web Applications">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+      padding-top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 9999;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Fixed Tiny Logo Bug */
+    .navbar-brand img {
+      height: 55px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .navbar .nav-link {
+      position: relative;
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 13px !important;
+      transition: 0.3s ease;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ff4d5a !important;
+    }
+
+    .navbar .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      right: 13px;
+      bottom: 3px;
+      height: 2px;
+      background: #ff4d5a;
+      transform: scaleX(0);
+      transition: 0.3s ease;
+    }
+
+    .navbar .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .navbar-toggler {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 90px 40px 80px;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.72),
+          rgba(0, 0, 0, 0.85)
+        ),
+        url('./assets/Picsart_26-08-01_01-29-21-685.jpg\ \(1\).jpeg')
+        
+    }
+
+    .hero h1 {
+      font-size: 65px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: #ff4d5a;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 20px;
+    }
+
+    .hero-btns {
+      margin-top: 35px;
+    }
+
+    .btn-custom {
+      padding: 13px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+      margin: 8px;
+    }
+
+    .btn-main {
+      background: #ff4d5a;
+      color: #fff;
+      border: 2px solid #ff4d5a;
+    }
+
+    .btn-main:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .btn-outline-custom {
+      border: 2px solid #ff4d5a;
+      color: #fff;
+    }
+
+    .btn-outline-custom:hover {
+      background: #ff4d5a;
+      color: #fff;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 22px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ff4d5a;
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       SECTION TITLES
+    ========================= */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      color: #ff4d5a;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #aaa;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    #about {
+      background: #111;
+    }
+
+    .about-box {
+      background: #161616;
+      padding: 50px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .about-box h3 {
+      color: #fff;
+    }
+
+    .about-box p {
+      color: #ccc !important;
+      line-height: 1.8;
+    }
+
+    .service-card {
+      background: #1b1b1b;
+      padding: 35px;
+      border-radius: 20px;
+      transition: 0.4s;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff4d5a;
+      box-shadow: 0 15px 35px rgba(255, 77, 90, 0.08);
+    }
+
+    .service-card i {
+      font-size: 45px;
+      color: #ff4d5a;
+    }
+
+    .service-card h4 {
+      color: #fff;
+    }
+
+    .service-card li {
+      color: #ddd;
+    }
+
+
+    /* =========================
+       PORTFOLIO
+    ========================= */
+
+    #portfolio {
+      background: #0f0f0f;
+    }
+
+    .portfolio-card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.4s;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff4d5a;
+      box-shadow: 0 15px 35px rgba(255, 77, 90, 0.08);
+    }
+
+    /* Fixed Oversized Portfolio Image Bug */
+    .portfolio-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: 0.4s;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-content {
+      padding: 25px;
+    }
+
+    .portfolio-content span {
+      color: #ff4d5a;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .portfolio-content h4 {
+      color: #fff;
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-content p {
+      color: #bbb;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       REVIEWS
+    ========================= */
+
+    #reviews {
+      background: #111;
+    }
+
+    .review-card {
+      background: #161616;
+      padding: 30px;
+      border-radius: 20px;
+      height: 100%;
+      transition: 0.4s;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .review-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff4d5a;
+    }
+
+    .review-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff4d5a;
+      margin-bottom: 15px;
+    }
+
+    .review-card h5 {
+      color: #fff;
+    }
+
+    .review-card small {
+      color: #999;
+    }
+
+    .review-card p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .stars {
+      color: #ff4d5a;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact {
+      background: #0f0f0f;
+    }
+
+    .contact-info-box,
+    .contact-form-box {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      height: 100%;
+    }
+
+    .contact-info-box h3 {
+      color: #ff4d5a;
+      font-weight: 700;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ff4d5a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-item h5 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .contact-item p {
+      color: #ccc;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #222;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #ff4d5a;
+      transform: translateY(-3px);
+    }
+
+    .contact-form-box .form-control {
+      background: #fff;
+      border: none;
+      color: #000;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+
+    .contact-form-box .form-control::placeholder {
+      color: #777;
+    }
+
+    .contact-form-box .form-control:focus {
+      box-shadow: none;
+      border: 1px solid #ff4d5a;
+      background: #fff;
+      color: #000;
+    }
+
+    .contact-btn {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d5a;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #fff;
+      color: #111;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 30px 0;
+      color: #aaa;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       MOBILE & RESPONSIVE
+    ========================= */
+
+    @media (max-width: 991px) {
+
+      .navbar-brand img {
+        height: 48px;
+      }
+
+      .navbar-collapse {
+        background: rgba(0, 0, 0, 0.98);
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      .navbar-nav {
+        align-items: flex-start;
+        gap: 2px;
+      }
+
+      .navbar .nav-link {
+        padding: 10px 12px !important;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        padding: 120px 20px 80px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .about-box {
+        padding: 30px 20px;
+      }
+
+      .contact-info-box,
+      .contact-form-box {
+        padding: 25px;
+      }
+
+      .portfolio-card img {
+        height: 180px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .navbar-brand img {
+        height: 42px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .btn-custom {
+        padding: 11px 25px;
+      }
+
+      .contact-item {
+        gap: 12px;
+      }
+
+      .contact-item .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+     
+
+<a class="navbar-brand logo-wrapper" href="#home">
+
+    <!-- Logo Image -->
+    <div class="logo-img">
+        <img src="./assets/logo h.png" alt="">
+    </div>
+
+    <!-- Brand Name -->
+    <div class="logo-text">
+        <span class="dev">DEV</span>
+        <span class="and">&amp;</span>
+        <span class="design">DESIGN</span>
+    </div>
+
+</a>
+<style>
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Logo ki jagah */
+.logo-img {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Future mein image lagao */
+.logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Brand Name */
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-text .dev {
+    color:#e63946;
+}
+
+.logo-text .and {
+    color: #777;
+    font-size: 19px;
+}
+
+.logo-text .design {
+    color: #e63946;
+}
+
+</style>
+
+
+
+
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Reviews</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <h1>
+        Hi, I'm <span>Sharral Saddique</span>
+      </h1>
+
+      <p>
+        Professional Frontend & Backend Web Developer
+      </p>
+
+      <div class="hero-btns">
+
+        <a
+          href="#contact"
+          class="btn btn-custom btn-main">
+
+          Hire Me
+
+        </a>
+
+        <a
+          href="#portfolio"
+          class="btn btn-custom btn-outline-custom">
+
+          View Work
+
+        </a>
+
+      </div>
+
+
+      <div class="social-icons">
+
+        <a href="https://www.facebook.com/profile.php?id=61553855436350">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/sharral_creates/">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://wa.link/wrqzpr">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About Me</h2>
+
+        <p>
+          Passionate Full Stack Web Developer focused on building
+          professional, modern, responsive, and user-friendly websites.
+        </p>
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+          <div class="about-box">
+
+            <div class="text-center">
+
+              <h3 class="mb-4">
+                Professional Frontend & Backend Developer
+              </h3>
+
+              <p class="mb-4">
+
+                I am a professional Full Stack Web Developer with strong
+                experience in creating responsive websites, business
+                solutions, and modern web applications.
+
+                I specialize in both frontend and backend development
+                using modern technologies and clean coding standards.
+
+              </p>
+
+              <p class="mb-5">
+
+                I have experience working with HTML5, CSS3,
+                JavaScript, Bootstrap, PHP, MySQL, and responsive
+                UI/UX design. My goal is to create elegant,
+                fast, secure, and high-quality digital experiences.
+
+              </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+              <div class="col-lg-6">
+
+                <div class="service-card">
+
+                  <i class="bi bi-code-slash"></i>
+
+                  <h4 class="mt-4 mb-3">
+                    Frontend Development
+                  </h4>
+
+                  <ul class="list-unstyled">
+
+                    <li class="mb-3">✔ HTML5</li>
+                    <li class="mb-3">✔ CSS3</li>
+                    <li class="mb-3">✔ JavaScript</li>
+                    <li class="mb-3">✔ Bootstrap 5</li>
+                    <li class="mb-3">✔ Responsive UI/UX Design</li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+
+              <div class="col-lg-6">
+
+                <div class="service-card">
+
+                  <i class="bi bi-server"></i>
+
+                  <h4 class="mt-4 mb-3">
+                    Backend Development
+                  </h4>
+
+                  <ul class="list-unstyled">
+
+                    <li class="mb-3">✔ PHP</li>
+                    <li class="mb-3">✔ MySQL Database</li>
+                    <li class="mb-3">✔ Authentication Systems</li>
+                    <li class="mb-3">✔ Dynamic Web Applications</li>
+                    <li class="mb-3">✔ API Integration</li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PORTFOLIO ================= -->
+
+  <section id="portfolio">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Professional Portfolio</h2>
+
+        <p>
+          Modern and elegant website projects designed for businesses,
+          startups, ecommerce brands, and agencies.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/ChatGPT Image Jul 23, 2026, 11_51_07 AM.png"
+              alt="Gym Website">
+
+            <div class="portfolio-content">
+
+              <span>Gym Website</span>
+
+              <h4>Modern Gym Website</h4>
+
+              <p>
+                Modern gym website with elegant responsive design.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/portfolio.PNG"
+              alt="Personal Portfolio Website">
+
+            <div class="portfolio-content">
+
+              <span>Personal Portfolio</span>
+
+              <h4>Creative Developer Portfolio</h4>
+
+              <p>
+                Elegant portfolio website for personal branding.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/thumnail.PNG"
+              alt="Music Streaming Website">
+
+            <div class="portfolio-content">
+
+              <span>Web Application</span>
+
+              <h4>SOUND Web Application</h4>
+
+              <p>
+                Modern music and streaming web application.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/admin dashboard.PNG"
+              alt="Admin Dashboard">
+
+            <div class="portfolio-content">
+
+              <span>Dashboard</span>
+
+              <h4>Admin Dashboard</h4>
+
+              <p>
+                Professional analytics and management dashboard system.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/Capture.PNG"
+              alt="Food Business Website">
+
+            <div class="portfolio-content">
+
+              <span>Business Website</span>
+
+              <h4>Authentic Food Business Website</h4>
+
+              <p>
+                High-converting business website with modern UI/UX.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 6 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/e commerce store.png"
+              alt="Ecommerce Website">
+
+            <div class="portfolio-content">
+
+              <span>Ecommerce Website</span>
+
+              <h4>Modern E-commerce Store</h4>
+
+              <p>
+                Professional ecommerce shopping website with premium UI.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 7 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="./assets/morden we.png"
+              alt="Luxury Fashion Store">
+
+            <div class="portfolio-content">
+
+              <span>Ecommerce Website</span>
+
+              <h4>Luxury Fashion Store</h4>
+
+              <p>
+                Premium online shopping website with modern UI/UX
+                and responsive design.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 8 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+              alt="Creative Developer Website">
+
+            <div class="portfolio-content">
+
+              <span>Personal Portfolio</span>
+
+              <h4>Creative Developer Portfolio</h4>
+
+              <p>
+                Elegant personal branding website with modern layout.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 9 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="portfolio-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1200&auto=format&fit=crop"
+              alt="Business Website">
+
+            <div class="portfolio-content">
+
+              <span>Business Website</span>
+
+              <h4>Corporate Company Website</h4>
+
+              <p>
+                Professional corporate website built for modern
+                businesses and agencies.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= REVIEWS ================= -->
+
+  <section id="reviews">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Client Reviews</h2>
+
+        <p>
+          Trusted by clients worldwide for quality work and modern design.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <!-- REVIEW 1 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Client">
+
+            <h5>Michael Johnson</h5>
+
+            <small>New York, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              Amazing developer with outstanding communication
+              and premium quality work.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 2 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Client">
+
+            <h5>Emily Carter</h5>
+
+            <small>California, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              Professional responsive website with modern
+              and elegant design.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 3 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/men/76.jpg"
+              alt="Client">
+
+            <h5>David Miller</h5>
+
+            <small>Texas, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              Delivered the project before deadline with
+              clean and optimized code.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 4 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Client">
+
+            <h5>Sophia Wilson</h5>
+
+            <small>Florida, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              Outstanding UI/UX quality and very professional
+              communication.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 5 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/men/54.jpg"
+              alt="Client">
+
+            <h5>James Anderson</h5>
+
+            <small>Chicago, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              Premium looking website with excellent
+              performance and speed.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 6 -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="review-card">
+
+            <img
+              src="https://randomuser.me/api/portraits/women/12.jpg"
+              alt="Client">
+
+            <h5>Olivia Brown</h5>
+
+            <small>Seattle, USA</small>
+
+            <div class="stars mt-2 mb-3">
+
+              ★★★★★
+
+            </div>
+
+            <p>
+              One of the best developers I’ve worked with.
+              Highly recommended.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Contact Me</h2>
+
+        <p>
+          Have a project in mind? Let’s build something modern,
+          professional, and powerful together.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="col-lg-5">
+
+          <div class="contact-info-box">
+
+            <h3 class="mb-4">
+              Contact Information
+            </h3>
+
+
+            <div class="contact-item">
+
+              <div class="icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+
+              <div>
+
+                <h5>Email</h5>
+
+                <p>
+                  sharralsaddique2@gmail.com
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="icon">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+
+              <div>
+
+                <h5>WhatsApp</h5>
+
+                <p>
+                  +92 3293091569
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+
+              <div>
+
+                <h5>Location</h5>
+
+                <p>
+                  Karachi, Pakistan
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="social-links mt-5">
+
+              <a href="https://www.facebook.com/profile.php?id=61553855436350">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="https://www.instagram.com/sharral_creates/">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="https://wa.link/wrqzpr">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="col-lg-7">
+
+          <div class="contact-form-box">
+
+            <form>
+
+              <div class="row">
+
+                <div class="col-md-6">
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required>
+
+                </div>
+
+              </div>
+
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Subject"
+                required>
+
+
+              <textarea
+                rows="6"
+                class="form-control"
+                placeholder="Write Your Message"
+                required></textarea>
+
+
+              <button
+                type="submit"
+                class="contact-btn">
+
+                Send Message
+
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Sharral Saddique | All Rights Reserved
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+
+</body>
+
+</html>
